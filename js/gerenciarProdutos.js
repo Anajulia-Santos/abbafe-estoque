@@ -23,17 +23,6 @@ function carregarProdutos() {
     });
 }
 
-function editarProduto(index) {
-    let produtos = JSON.parse(localStorage.getItem("produtos")) || [];
-    let produto = produtos[index];
-
-    document.getElementById("nome").value = produto.nome;
-    document.getElementById("valorFornecedor").value = produto.valorFornecedor;
-    document.getElementById("valorVenda").value = produto.valorVenda;
-    document.getElementById("quantidade").value = produto.quantidade;
-
-    excluirProduto(index); // Exclui para ser adicionado novamente após a edição
-}
 
 function excluirProduto(index) {
     let produtos = JSON.parse(localStorage.getItem("produtos")) || [];
